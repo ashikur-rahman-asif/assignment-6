@@ -38,7 +38,7 @@ const displaySearchResult = (books) => {
         <div class="item">
                     <img src="${book.cover_i?`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`:`https://image.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg`}" alt="">
                     <div class="flex-container">
-                        <h1 class="title">${book.title?book.title:"Title Not Found"}</h1>
+                        <h1 class="title">Title: ${book.title?book.title:"Title Not Found"}</h1>
                     </div>
                     <p class="item-data">Author: ${actualName==='undefined'?"Author Not Found":actualName}</p>
                     <p class="item-data">Published on: ${publishOn==='undefined'?"Publish Date Not Found":publishOn}</p>
