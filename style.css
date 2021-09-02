@@ -43,31 +43,34 @@ section {
 
 }
 
-form {
+.main{
+    margin: auto;
     width: 90%;
     max-width: 400px;
-    margin: 20px auto;
-    background-color: rgba(223, 223, 223);
-    border-radius: 4px;
-}
-
-form input {
-    width: 90%;
+  }
+  .main input,button{
+    width:75%;
+    border:2px solid white;
+    border-right:0px;
+    font-size: 18px;
+    padding:12px;
     background-color: transparent;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    display: inline-block;
-
-}
-
-form ion-icon {
-    width: 8%;
-    font-size: 3rem;
-    margin: -14px;
-    color: rgb(75, 75, 75);
-}
+    color:white;
+  }
+  .main input:hover{
+    opacity: .8;
+  }
+  .main button{
+    width:25%;
+    background-color: #eee;
+    color:black;
+    transition: all 0.3s;
+    float: right;
+    border-left:0px;
+  }
+  .main button:hover{
+    opacity: .8;
+  }
 
 .search-result {
     margin-top: 50px;
@@ -116,8 +119,4 @@ form ion-icon {
 
 #totalFound {
     color: rgb(255, 255, 255);
-}
-
-#searchIcon {
-    cursor: pointer;
 }
