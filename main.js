@@ -11,7 +11,7 @@ const searchBook = () => {
         searchText = searchField.value
         //console.log(searchText)
         searchField.value = ''
-        const url = `http://openlibrary.org/search.json?q=${searchText}`
+        const url = `https://openlibrary.org/search.json?q=${searchText}`
         fetch(url)
         .then(response => response.json())
         .then(data => {
