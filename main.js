@@ -5,7 +5,7 @@ let searchField = document.querySelector('#search-field')
 
 const searchBook = () => {
     if (searchField.value) {
-        
+
         totalFound.innerHTML = `Loading.......`
         searchField = document.getElementById('search-field')
         searchText = searchField.value
@@ -13,11 +13,11 @@ const searchBook = () => {
         searchField.value = ''
         const url = `https://openlibrary.org/search.json?q=${searchText}`
         fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            displaySearchResult(data.docs)
-        })
-    }else{
+            .then(response => response.json())
+            .then(data => {
+                displaySearchResult(data.docs)
+            })
+    } else {
         alert("Please enter something to search")
     }
 }
@@ -36,7 +36,9 @@ const displaySearchResult = (books) => {
         let publishOn = String(book.publish_date)
         singleItem += `
         <div class="item">
-                    <img src="${book.cover_i?`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`:`https://image.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg`}" alt="">
+        <div class="image-wrapper">
+        <img src="${book.cover_i?`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`:`https://image.shutterstock.com/image-vector/no-image-available-vector-illustration-260nw-744886198.jpg`}" alt="">
+        </div>
                     <div class="flex-container">
                         <h1 class="title">Title: ${book.title?book.title:"Title Not Found"}</h1>
                     </div>
